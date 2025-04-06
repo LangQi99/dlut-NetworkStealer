@@ -1,0 +1,5 @@
+requests>=2.31.0
+scapy>=2.5.0
+PyQt6>=6.5.0
+pythonping>=1.1.4
+wmi>=1.5.1
