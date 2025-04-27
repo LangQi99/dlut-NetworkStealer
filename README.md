@@ -6,13 +6,18 @@
 
 适用欺骗仅认证MAC地址的校园网，可以主动、被动获取离线、在线的MAC地址，允许Windows设备修改网卡MAC地址。
 
-
+开发区校区可用，凌水校区未严格测试。
 
 ## 环境要求
 - Python 3.13 (其余版本未测试)
 - Windows 操作系统
 
-## 安装步骤
+## 使用步骤
+
+可选择直接使用可执行文件：
+[https://github.com/LangQi99/dlut-NetworkStealer/releases](https://github.com/LangQi99/dlut-NetworkStealer/releases)
+
+或自行使用：
 
 1. 创建并激活虚拟环境（推荐）
 ```bash
@@ -20,12 +25,12 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-2. 安装项目依赖
+1. 安装项目依赖
 ```bash
 pip install -r requirements.txt
 ```
 
-3. 安装 pyinstaller（可选、用于编译）
+1. 安装 pyinstaller（可选、用于编译）
 ```bash
 pip install pyinstaller
 ```
