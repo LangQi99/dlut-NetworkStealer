@@ -398,7 +398,11 @@ class NetworkStealerGUI(QMainWindow):
         new_mac = self.mac_input.text()
 
         if utils.modify_mac_address(adapter_index, new_mac):
-            QMessageBox.information(self, "成功", "MAC地址修改成功，请重启网卡使更改生效")
+            if utils._check_mac_address(new_mac):
+                QMessageBox.information(self, "成功", "MAC地址修改成功，请重启网卡使更改生效")
+            else:
+                QMessageBox.warning(
+                    self, "警告", "windows环境下\n从左往右的第二位mac地址必须为2,6,A,E\n否则可能修改失败")
         else:
             QMessageBox.warning(self, "失败", "MAC地址修改失败\n尝试使用管理员权限打开")
 

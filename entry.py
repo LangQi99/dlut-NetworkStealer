@@ -1,4 +1,5 @@
 import requests
+import scapy
 import scapy.all
 import GUI
 import sys

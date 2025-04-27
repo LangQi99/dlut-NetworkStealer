@@ -47,7 +47,16 @@ def get_dlut_network_info():
 
         return result
     except Exception as e:
-        return {"错误": f"获取校园网信息失败: {str(e)}"}
+        return {
+            "登录状态": "无法获取",
+            "账号": "若连接凌水校区校园网",
+            "姓名": "属于正常现象",
+            "剩余流量": "",
+            "账户余额": "",
+            "终端类型": "PC",
+            "IP 地址": "",
+            "MAC 地址": ""
+        }
 
 
 def get_local_ip_by_interface(interface: str) -> str:
@@ -108,7 +117,7 @@ def _check_mac_address(mac_address: str) -> bool:
     检查MAC地址是否符合要求
     返回是否符合要求
     """
-    return mac_address[1] in ['2', '6', 'A', 'E']
+    return mac_address[1].upper() in ['2', '6', 'A', 'E']
 
 
 def check_valid_mac_address(mac_address: str) -> bool:
