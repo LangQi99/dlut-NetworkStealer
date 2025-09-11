@@ -1,71 +1,31 @@
 # NetworkStealer
 
-**本软件仅供学习交流，请勿用于非法用途，用户承担使用本软件可能带来的任何后果，作者不承担任何责任。**
+## 免责声明
+
+**本软件仅供学习交流知识，请勿用于违规用途**
+
+**用户承担使用本软件可能带来的任何后果，作者不承担任何责任**
+
+使用本软件时，即代表您同意本免责声明。
+
+## 简介
 
 一个基于Python的网络工具。
 
-适用欺骗仅认证MAC地址的校园网，可以主动、被动获取离线、在线的MAC地址，允许Windows设备修改网卡MAC地址。
+适用欺骗仅认证MAC地址的校园网/企业网，可以主动、被动获取离线、在线的MAC地址，允许Windows设备修改网卡MAC地址。
 
-开发区校区可用，凌水校区未严格测试。
+## 你可以学到的知识
+
+- 如何理解ARP数据包
+- 如何抓取ARP包
+- 如何在Windows上修改网卡MAC地址
+- Windows的MAC地址特殊要求
+
+## 你不能做的事情
+
+- 用于违规用途
+- 用于非法用途
 
 ## 环境要求
-- Python 3.13 (其余版本未测试)
+
 - Windows 操作系统
-
-## 使用步骤
-
-可选择直接使用可执行文件：
-[https://github.com/LangQi99/dlut-NetworkStealer/releases](https://github.com/LangQi99/dlut-NetworkStealer/releases)
-
-或自行使用：
-
-1. 创建并激活虚拟环境（推荐）
-```bash
-python -m venv venv
-.\venv\Scripts\activate
-```
-
-1. 安装项目依赖
-```bash
-pip install -r requirements.txt
-```
-
-1. 安装 pyinstaller（可选、用于编译）
-```bash
-pip install pyinstaller
-```
-
-## 运行方式
-
-### 直接运行
-```bash
-python entry.py
-```
-
-### 编译为可执行文件
-
-1. 编译 Python 文件为 pyd
-```bash
-python setup.py build_ext --inplace
-```
-
-2. 编译为可执行文件（两种方式）
-```bash
-# 普通版本
-pyinstaller -F -w entry.py
-
-# 管理员权限版本
-pyinstaller -F -w entry.py --uac-admin
-```
-
-或者直接运行 `build.bat` 脚本：
-```bash
-.\build.bat
-```
-
-编译后的可执行文件将在 `dist` 目录中生成。
-
-## 注意事项
-- 确保以管理员权限运行程序以获得完整功能
-- 编译过程可能需要几分钟时间
-- 运行前请确保所有依赖都已正确安装
