@@ -258,7 +258,7 @@ class NetworkStealerGUI(QMainWindow):
         self.storage_table.setHorizontalHeaderLabels(["MAC地址", "备注", "操作"])
         self.storage_table.setColumnWidth(0, 150)
         self.storage_table.itemDoubleClicked.connect(
-            lambda: self.handle_item_double_clicked())
+            self.handle_item_double_clicked)
         self.storage_table.itemChanged.connect(
             self.handle_item_changed)
         storage_layout.addWidget(self.storage_table)
